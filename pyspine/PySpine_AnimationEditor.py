@@ -13,20 +13,18 @@ from data_classes import (
 
 # Import the new common modules
 from viewport_common import ViewportManager
-from drawing_common import draw_grid, draw_panel_background, draw_text_lines, is_in_rect
+from drawing_common import draw_grid, draw_panel_background, draw_text_lines
 from bone_common import (
-    draw_bone, draw_bone_hierarchy_connections, get_bone_at_position,
-    get_bone_start_at_position, get_bone_end_at_position
+    draw_bone, draw_bone_hierarchy_connections, get_bone_at_position
 )
-from sprite_common import safe_sprite_extract, draw_sprite_with_origin
+from sprite_common import draw_sprite_with_origin
 from file_common import save_json_project, load_json_project, serialize_dataclass_dict
 from event_common import BaseEventHandler
-from common import _point_to_line_distance
 
 # Import undo/redo system
-from undo_redo_common import UndoRedoMixin, UndoRedoCommand, StateSnapshotCommand
+from undo_redo_common import UndoRedoMixin
 from animation_commands import (
-    AddKeyframeCommand, DeleteKeyframeCommand, ModifyKeyframeCommand, MoveKeyframeCommand,
+    AddKeyframeCommand, DeleteKeyframeCommand, MoveKeyframeCommand,
     SetInterpolationCommand, LoadAttachmentConfigurationCommand, LoadAnimationProjectCommand,
     ClearAnimationCommand, BoneManipulationCommand
 )

@@ -23,9 +23,15 @@ def safe_sprite_extract(sprite_sheet, sprite_rect):
 def draw_sprite_with_origin(screen, viewport_manager, sprite_sheet, sprite_rect, world_pos,
                             rotation=0, scale=1.0, selected=False):
     """Draw sprite with origin point as both attachment and rotation pivot"""
+
+    # Prevent division by zero
+    if sprite_rect.width <= 0 or sprite_rect.height <= 0:
+        return None
+
+    # Prevent null sprite sheet extraction
     sprite_surface = safe_sprite_extract(sprite_sheet, sprite_rect)
     if not sprite_surface:
-        return
+        return None
 
     # Calculate final size after scaling
     final_width = max(1, int(sprite_rect.width * scale * viewport_manager.viewport_zoom))

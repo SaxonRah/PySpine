@@ -188,7 +188,7 @@ def draw_bones_by_layer_order(screen, viewport_manager, bones, selected_bone=Non
                 draw_bone(screen, viewport_manager, bone, selected=selected, font=font)
 
 
-# IMPROVED: Functions for enhanced bone selection with very limited buffer
+# Functions for enhanced bone selection with very limited buffer
 def get_all_bones_at_position(bones, pos, viewport_zoom, tolerance=5):
     """Find ALL bones at viewport position, sorted by priority (end > start > body)"""
     x, y = pos
