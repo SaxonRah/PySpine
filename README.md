@@ -1,4 +1,4 @@
-![PySpine Logo](https://github.com/SaxonRah/PySpine/blob/main/PySpine_Logo.png "PySpine Logo")
+![PySpine Logo](https://github.com/SaxonRah/PySpine/blob/main/images/PySpine_Logo.png "PySpine Logo")
 # PySpine - 2D Skeletal Animation Toolkit [Version 0.1]
 
 A comprehensive Python-based 2D skeletal animation system built with Pygame, featuring multiple specialized editors for creating complete animated characters and objects.
@@ -38,6 +38,11 @@ PySpine consists of four integrated editors that form a complete 2D animation pi
 - **Real-time playback** - Preview animations with play/pause controls
 - **Timeline interaction** - Scrub timeline, move keyframes, adjust timing
 - **Bone hierarchy preservation** - Animations respect parent-child relationships
+
+![Sprite Sheet Editor](https://github.com/SaxonRah/PySpine/blob/main/images/PySpine_SpriteSheetEditor.png "Sprite Sheet Editor")
+![Bone Editor](https://github.com/SaxonRah/PySpine/blob/main/images/PySpine_BoneEditor.png "Bone Editor")
+![Attachment Editor](https://github.com/SaxonRah/PySpine/blob/main/images/PySpine_AttachmentEditor.png "Attachment Editor")
+![Animation Editor](https://github.com/SaxonRah/PySpine/blob/main/images/PySpine_AnimationEditor.png "Animation Editor")
 
 ## Workflow
 

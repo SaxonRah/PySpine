@@ -984,7 +984,7 @@ if __name__ == "__main__":
     editor = SpriteSheetEditor()
 
     # Try to load a sprite sheet if it exists
-    if os.path.exists("GIJoe_FigurineParts.png"):
-        editor.load_sprite_sheet("GIJoe_FigurineParts.png", use_command=False)  # Don't use command for initial load
+    if os.path.exists("PySpineGuy.png"):
+        editor.load_sprite_sheet("PySpineGuy.png", use_command=False)  # Don't use command for initial load
 
     editor.run()

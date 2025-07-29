@@ -1,28 +1,23 @@
-# PySpine_BoneEditor.py - Updated with COMPLETE Undo/Redo System
 import pygame
 import sys
-import json
 import math
-from typing import Dict, Optional, List, Tuple
-from dataclasses import asdict
+from typing import Dict, List, Tuple
 
 from configuration import *
-from common import _point_to_line_distance
 from data_classes import Bone, BoneEditMode, BoneLayer, AttachmentPoint
 
 # Import the new common modules
 from viewport_common import ViewportManager
-from drawing_common import draw_grid, draw_panel_background, draw_text_lines, is_in_rect
+from drawing_common import draw_grid, draw_panel_background, draw_text_lines
 from bone_common import (
     draw_bone, draw_bone_hierarchy_connections, draw_bones_by_layer_order,
-    get_bone_at_position, get_bone_start_at_position, get_bone_end_at_position,
     get_all_bones_at_position, get_attachment_point_at_position
 )
 from file_common import save_json_project, load_json_project, serialize_dataclass_dict
 from event_common import BaseEventHandler
 
 # Import undo/redo system
-from undo_redo_common import UndoRedoMixin, UndoRedoCommand, StateSnapshotCommand
+from undo_redo_common import UndoRedoMixin, UndoRedoCommand
 from bone_commands import (
     CreateBoneCommand, DeleteBoneCommand, MoveBoneCommand, RotateBoneCommand,
     ChangeBoneLayerCommand, ChangeAttachmentPointCommand
@@ -30,6 +25,9 @@ from bone_commands import (
 
 # Initialize Pygame
 pygame.init()
+
+
+BONE_EDITOR_NAME_VERSION = "Bone Editor v0.1"
 
 
 class LoadBoneProjectCommand(UndoRedoCommand):
@@ -106,7 +104,7 @@ class BoneSheetEditor(BaseEventHandler, UndoRedoMixin):
         UndoRedoMixin.__init__(self)
 
         self.screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
-        pygame.display.set_caption("Bone Sheet Editor v3 - COMPLETE Undo/Redo System!")
+        pygame.display.set_caption(f"{BONE_EDITOR_NAME_VERSION}")
         self.clock = pygame.time.Clock()
         self.font = pygame.font.Font(None, 24)
         self.small_font = pygame.font.Font(None, 18)
@@ -900,7 +898,7 @@ class BoneSheetEditor(BaseEventHandler, UndoRedoMixin):
         draw_bones_by_layer_order(self.screen, self.viewport_manager, self.bones,
                                   self.selected_bone, font=self.tiny_font)
 
-        # Enhanced endpoint visualization for selected bone
+        # endpoint visualization for selected bone
         if self.selected_bone and self.selected_bone in self.bones:
             bone = self.bones[self.selected_bone]
 
@@ -912,11 +910,11 @@ class BoneSheetEditor(BaseEventHandler, UndoRedoMixin):
             start_screen = self.viewport_manager.viewport_to_screen((bone.x, bone.y), TOOLBAR_HEIGHT)
             end_screen = self.viewport_manager.viewport_to_screen((end_x, end_y), TOOLBAR_HEIGHT)
 
-            # Enhanced startpoint (blue)
+            # startpoint (blue)
             pygame.draw.circle(self.screen, BLUE, (int(start_screen[0]), int(start_screen[1])), 8)
             pygame.draw.circle(self.screen, WHITE, (int(start_screen[0]), int(start_screen[1])), 8, 2)
 
-            # Enhanced endpoint (red) - this is what you drag to rotate
+            # endpoint (red) - this is what you drag to rotate
             pygame.draw.circle(self.screen, RED, (int(end_screen[0]), int(end_screen[1])), 8)
             pygame.draw.circle(self.screen, WHITE, (int(end_screen[0]), int(end_screen[1])), 8, 2)
 
@@ -957,7 +955,7 @@ class BoneSheetEditor(BaseEventHandler, UndoRedoMixin):
         title = self.font.render("Bone Hierarchy", True, BLACK)
         self.screen.blit(title, (10, TOOLBAR_HEIGHT + 10))
 
-        # Enhanced undo/redo status
+        # undo/redo status
         y_offset = TOOLBAR_HEIGHT + 40
         y_offset = self._draw_undo_redo_status(panel_rect, y_offset)
 
@@ -1136,20 +1134,10 @@ class BoneSheetEditor(BaseEventHandler, UndoRedoMixin):
             y_offset = draw_text_lines(self.screen, self.small_font, props,
                                        (panel_rect.x + 10, y_offset), BLACK, 20)
 
-        # Enhanced instructions with undo/redo info
+        # instructions with undo/redo info
         y_offset += 30
         instructions = [
-            "BONE EDITOR v3 - COMPLETE UNDO/REDO",
-            "",
-            "ALL OPERATIONS ARE UNDOABLE:",
-            "✓ Create bones (drag, Ctrl+N)",
-            "✓ Delete bones (DEL key)",
-            "✓ Move bones (drag blue/body)",
-            "✓ Rotate/Resize (drag red circle)",
-            "✓ Change bone layers (4/5/6, TAB)",
-            "✓ Change layer order (PgUp/PgDn)",
-            "✓ Toggle attachment (A key)",
-            "✓ Clear all bones (Ctrl+X)",
+            BONE_EDITOR_NAME_VERSION,
             "",
             "UNDO/REDO:",
             "Ctrl+Z: Undo | Ctrl+Y: Redo",
@@ -1180,7 +1168,7 @@ class BoneSheetEditor(BaseEventHandler, UndoRedoMixin):
 
         for instruction in instructions:
             if instruction:
-                if instruction.startswith("BONE EDITOR v3"):
+                if instruction.startswith(BONE_EDITOR_NAME_VERSION):
                     color = GREEN
                 elif instruction.startswith(("ALL OPERATIONS", "UNDO/REDO", "SELECTION", "ATTACHMENT", "LAYER CONTROLS", "MODES")):
                     color = RED
@@ -1212,16 +1200,16 @@ class BoneSheetEditor(BaseEventHandler, UndoRedoMixin):
             x_offset += 200
 
         # Enhanced toolbar with undo/redo info
-        file_text = self.small_font.render("COMPLETE UNDO/REDO: Ctrl+S: Save | Ctrl+L: Load | DEL: Delete | R: Reset", True, WHITE)
+        file_text = self.small_font.render("Ctrl+S: Save | Ctrl+L: Load | DEL: Delete | R: Reset", True, WHITE)
         self.screen.blit(file_text, (x_offset, 5))
 
-        undo_text = self.small_font.render("ALL UNDOABLE: Ctrl+Z: Undo | Ctrl+Y: Redo | A: Toggle Attach | Layers: 4/5/6", True, CYAN)
+        undo_text = self.small_font.render("Ctrl+Z: Undo | Ctrl+Y: Redo | A: Toggle Attach | Layers: 4/5/6", True, CYAN)
         self.screen.blit(undo_text, (x_offset, 25))
 
     def _draw_ui_info(self):
         """Draw additional UI information with detailed undo/redo status"""
         info_lines = [
-            "BONE EDITOR v3 - COMPLETE UNDO/REDO",
+            f"{BONE_EDITOR_NAME_VERSION}",
             f"Mode: {self.edit_mode.value}",
             f"Zoom: {self.viewport_manager.viewport_zoom:.1f}x",
             f"Bones: {len(self.bones)}",
@@ -1229,7 +1217,7 @@ class BoneSheetEditor(BaseEventHandler, UndoRedoMixin):
             ""
         ]
 
-        # Add enhanced undo/redo status
+        # Add undo/redo status
         if self.can_undo():
             last_action = str(self.undo_manager.undo_stack[-1])
             if len(last_action) > 40:
@@ -1298,7 +1286,7 @@ class BoneSheetEditor(BaseEventHandler, UndoRedoMixin):
 
         # Color-code lines
         for i, line in enumerate(info_lines):
-            if line.startswith("BONE EDITOR v3"):
+            if line.startswith(BONE_EDITOR_NAME_VERSION):
                 color = GREEN
             elif line.startswith("Last Action") and self.can_undo():
                 color = CYAN
