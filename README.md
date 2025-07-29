@@ -162,6 +162,8 @@ The system uses JSON files for data exchange:
 - `sprite_attachment_config.json` - Complete attachment configuration
 - `bone_animation.json` - Animation keyframes and timing
 
+See [PySpineOutputFormats.md] for implementing custom loaders for PySpine data.
+
 ## Features
 
 ### Complete Undo/Redo System
