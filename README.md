@@ -44,6 +44,8 @@ PySpine consists of four integrated editors that form a complete 2D animation pi
 ![Attachment Editor](https://github.com/SaxonRah/PySpine/blob/main/images/PySpine_AttachmentEditor.png "Attachment Editor")
 ![Animation Editor](https://github.com/SaxonRah/PySpine/blob/main/images/PySpine_AnimationEditor.png "Animation Editor")
 
+See [UpcomingFeatures.md] for upcoming features!
+
 ## Workflow
 
 ### 1. Sprite Preparation
@@ -145,13 +147,13 @@ PySpine consists of four integrated editors that form a complete 2D animation pi
 ## System Requirements
 
 - Python 3.7+
-- Pygame 2.0+
+- pygame-ce 2.0+
 - Standard Python libraries (math, json, os, sys, typing, dataclasses, enum)
 
 ## Installation
 
 1. Clone the repository
-2. Install Pygame: `pip install pygame`
+2. Install Pygame: `pip install pygame-ce`
 3. Run any editor: `python PySpine_SpriteSheetEditor.py`
 
 ## File Formats
