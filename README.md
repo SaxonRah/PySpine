@@ -1,6 +1,8 @@
 ![PySpine Logo](https://github.com/SaxonRah/PySpine/blob/main/images/PySpine_Logo.png "PySpine Logo")
 # PySpine - 2D Skeletal Animation Toolkit [Version 0.1]
 
+# WIP: Moving to pygame-gui instead of creating a gui from scratch.
+
 A comprehensive Python-based 2D skeletal animation system built with Pygame, featuring multiple specialized editors for creating complete animated characters and objects.
 
 ## Features Overview
