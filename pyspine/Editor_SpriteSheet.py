@@ -54,7 +54,7 @@ class LoadSpriteSheetCommand(UndoRedoCommand):
             # Don't clear sprites automatically - let user decide
             self.editor.selected_sprite = None
             self.editor.viewport_manager.viewport_offset = [50, 50]
-            self.editor._update_ui_elements()
+            self.editor.update_ui_elements()
             print(f"Loaded sprite sheet: {self.new_path}")
         else:
             print(f"Failed to load sprite sheet: {self.new_path}")
@@ -64,29 +64,29 @@ class LoadSpriteSheetCommand(UndoRedoCommand):
         self.editor.sprite_sheet_path = self.old_sprite_sheet_path
         self.editor.sprites = self.old_sprites.copy()
         self.editor.selected_sprite = self.old_selected_sprite
-        self.editor._update_ui_elements()
+        self.editor.update_ui_elements()
         print(f"Restored previous sprite sheet state")
 
 
 class ClearSpritesCommand(UndoRedoCommand):
     """Command for clearing all sprites"""
 
-    def __init__(self, editor, description: str = "Clear all sprites"):
+    def __init__(self, given_editor, description: str = "Clear all sprites"):
         super().__init__(description)
-        self.editor = editor
-        self.old_sprites = editor.sprites.copy()
-        self.old_selected_sprite = editor.selected_sprite
+        self.editor = given_editor
+        self.old_sprites = given_editor.sprites.copy()
+        self.old_selected_sprite = given_editor.selected_sprite
 
     def execute(self) -> None:
         self.editor.sprites.clear()
         self.editor.selected_sprite = None
-        self.editor._update_ui_elements()
+        self.editor.update_ui_elements()
         print("Cleared all sprites")
 
     def undo(self) -> None:
         self.editor.sprites = self.old_sprites.copy()
         self.editor.selected_sprite = self.old_selected_sprite
-        self.editor._update_ui_elements()
+        self.editor.update_ui_elements()
         print(f"Restored {len(self.old_sprites)} sprites")
 
 
@@ -293,18 +293,18 @@ class SpriteSheetEditorGUI(BaseEventHandler, UndoRedoMixin):
         # Initial UI update - delay this to avoid the error during initialization
         pygame.time.set_timer(pygame.USEREVENT + 1, 100)  # Update UI after 100ms
 
-    def _update_ui_elements(self):
+    def update_ui_elements(self):
         """Update UI elements to reflect current state"""
         # Update sprite list
         sprite_names = list(self.sprites.keys())
         self.sprite_selection_list.set_item_list(sprite_names)
 
-        # Update selection in list
-        if self.selected_sprite and self.selected_sprite in sprite_names:
-            try:
-                self.sprite_selection_list.set_single_selection(self.selected_sprite)
-            except:
-                pass  # Ignore selection errors
+        # Update selection in list - 'set_single_selection' Doesn't exist.
+        # if self.selected_sprite and self.selected_sprite in sprite_names:
+        #    try:
+        #         self.sprite_selection_list.set_single_selection(self.selected_sprite)
+        #     except:
+        #         pass  # Ignore selection errors
 
         # Update properties display
         if self.selected_sprite and self.selected_sprite in self.sprites:
@@ -396,7 +396,7 @@ Origin: ({sprite.origin_x:.3f}, {sprite.origin_y:.3f})<br><br>
                 self.sprite_sheet_path = path
                 print(f"Loaded sprite sheet: {path}")
                 self.viewport_manager.viewport_offset = [50, 50]
-                self._update_ui_elements()
+                self.update_ui_elements()
                 return True
             except pygame.error as e:
                 print(f"Failed to load sprite sheet: {e}")
@@ -421,7 +421,7 @@ Origin: ({sprite.origin_x:.3f}, {sprite.origin_y:.3f})<br><br>
             # Handle delayed UI initialization
             if event.type == pygame.USEREVENT + 1:
                 pygame.time.set_timer(pygame.USEREVENT + 1, 0)  # Cancel the timer
-                self._update_ui_elements()  # Now safe to update UI
+                self.update_ui_elements()  # Now safe to update UI
                 continue
 
             # Handle pygame-gui events - check both possible event types
@@ -501,7 +501,7 @@ Origin: ({sprite.origin_x:.3f}, {sprite.origin_y:.3f})<br><br>
                 selected_sprite = event.text
                 if selected_sprite in self.sprites:
                     self.selected_sprite = selected_sprite
-                    self._update_ui_elements()
+                    self.update_ui_elements()
 
     def _handle_mouse_down(self, event):
         if event.button == 1:  # Left click
@@ -597,7 +597,7 @@ Origin: ({sprite.origin_x:.3f}, {sprite.origin_y:.3f})<br><br>
         self.drag_start_origin = None
 
         # Update UI after operation
-        self._update_ui_elements()
+        self.update_ui_elements()
 
     def _handle_mouse_motion(self, event):
         # Handle viewport dragging
@@ -667,7 +667,7 @@ Origin: ({sprite.origin_x:.3f}, {sprite.origin_y:.3f})<br><br>
                 self.selected_sprite = None
 
             # Update UI when selection changes
-            self._update_ui_elements()
+            self.update_ui_elements()
 
     def _handle_right_click(self, pos):
         """Right click to create new sprite using command system"""
@@ -854,7 +854,7 @@ Origin: ({sprite.origin_x:.3f}, {sprite.origin_y:.3f})<br><br>
         self.execute_command(create_command)
 
         self.selected_sprite = sprite_name
-        self._update_ui_elements()
+        self.update_ui_elements()
         print(f"Created sprite: {sprite_name}")
 
     def _create_sprite_at_position(self, pos):
@@ -961,7 +961,7 @@ Origin: ({sprite.origin_x:.3f}, {sprite.origin_y:.3f})<br><br>
             "sprites": {name: asdict(sprite) for name, sprite in self.sprites.items()}
         }
         save_json_project("sprite_project.json", project_data, "Sprite project saved successfully!")
-        self._update_ui_elements()
+        self.update_ui_elements()
 
     def load_project(self):
         """Load a project"""
@@ -982,7 +982,7 @@ Origin: ({sprite.origin_x:.3f}, {sprite.origin_y:.3f})<br><br>
             # Re-enable undo tracking and clear history
             self.undo_manager.enable()
             self.clear_history()
-            self._update_ui_elements()
+            self.update_ui_elements()
 
     def delete_selected(self):
         """Delete selected sprite using command system"""
@@ -990,7 +990,7 @@ Origin: ({sprite.origin_x:.3f}, {sprite.origin_y:.3f})<br><br>
             delete_command = DeleteSpriteCommand(self.sprites, self.selected_sprite)
             self.execute_command(delete_command)
             self.selected_sprite = None
-            self._update_ui_elements()
+            self.update_ui_elements()
 
     def reset_viewport(self):
         """Reset viewport to default position and zoom"""
@@ -1000,13 +1000,13 @@ Origin: ({sprite.origin_x:.3f}, {sprite.origin_y:.3f})<br><br>
     def undo(self, count: int = 1) -> bool:
         result = super().undo(count)
         if result:
-            self._update_ui_elements()
+            self.update_ui_elements()
         return result
 
     def redo(self, count: int = 1) -> bool:
         result = super().redo(count)
         if result:
-            self._update_ui_elements()
+            self.update_ui_elements()
         return result
 
     def update(self, dt):
