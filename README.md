@@ -2,6 +2,7 @@
 # PySpine - 2D Skeletal Animation Toolkit [Version 0.1]
 
 # WIP: Moving to pygame-gui instead of creating a gui from scratch.
+## WIP Building [pygame-gui-extensions](https://github.com/SaxonRah/pygame-gui-extensions) instead of raw pygame-gui.
 
 A comprehensive Python-based 2D skeletal animation system built with Pygame, featuring multiple specialized editors for creating complete animated characters and objects.
 
