@@ -1,0 +1,206 @@
+{
+  "editor_type": "Sprite Sheet Editor v1.0",
+  "data": {
+    "sprites": {
+      "sprite_2": {
+        "name": "sprite_2",
+        "x": 35,
+        "y": 5,
+        "width": 28,
+        "height": 25,
+        "origin_x": 0.5141722608691792,
+        "origin_y": 0.17782709472882424,
+        "endpoint_x": 0.5141722608691792,
+        "endpoint_y": 0.8418270947288242
+      },
+      "sprite_3": {
+        "name": "sprite_3",
+        "x": 67,
+        "y": 6,
+        "width": 25,
+        "height": 21,
+        "origin_x": 0.48787293217348066,
+        "origin_y": 0.19265130324860028,
+        "endpoint_x": 0.511872932173481,
+        "endpoint_y": 0.8307465413438384
+      },
+      "sprite_4": {
+        "name": "sprite_4",
+        "x": 98,
+        "y": 9,
+        "width": 28,
+        "height": 17,
+        "origin_x": 0.4784579751548935,
+        "origin_y": 0.2968045510718003,
+        "endpoint_x": 0.49988654658346526,
+        "endpoint_y": 0.9320986687188592
+      },
+      "sprite_5": {
+        "name": "sprite_5",
+        "x": 130,
+        "y": 12,
+        "width": 28,
+        "height": 34,
+        "origin_x": 0.507029403726322,
+        "origin_y": 0.10722580494766491,
+        "endpoint_x": 0.4856008322977508,
+        "endpoint_y": 0.9013434520064884
+      },
+      "sprite_6": {
+        "name": "sprite_6",
+        "x": 202,
+        "y": 5,
+        "width": 12,
+        "height": 21,
+        "origin_x": 0.8410277478849485,
+        "origin_y": 0.11178522447723041,
+        "endpoint_x": 0.3803396804703472,
+        "endpoint_y": 0.8605015875707648
+      },
+      "Head": {
+        "name": "Head",
+        "x": 7,
+        "y": 6,
+        "width": 15,
+        "height": 21,
+        "origin_x": 0.6131215536224682,
+        "origin_y": 0.8307465413438384,
+        "endpoint_x": 0.5064548869558014,
+        "endpoint_y": 0.1069370175343146
+      },
+      "sprite_1": {
+        "name": "sprite_1",
+        "x": 203,
+        "y": 41,
+        "width": 13,
+        "height": 16,
+        "origin_x": 0.612621243511088,
+        "origin_y": 0.19190833368662874,
+        "endpoint_x": 0.38185201274185726,
+        "endpoint_y": 0.7919083336866288
+      },
+      "sprite_7": {
+        "name": "sprite_7",
+        "x": 235,
+        "y": 41,
+        "width": 10,
+        "height": 15,
+        "origin_x": 0.43640761656441496,
+        "origin_y": 0.19136888926573714,
+        "endpoint_x": 0.5364076165644149,
+        "endpoint_y": 0.8180355559324037
+      },
+      "sprite_8": {
+        "name": "sprite_8",
+        "x": 235,
+        "y": 5,
+        "width": 12,
+        "height": 21,
+        "origin_x": 0.36367301380367917,
+        "origin_y": 0.16526349233266946,
+        "endpoint_x": 0.49700634713701203,
+        "endpoint_y": 0.8224063494755266
+      },
+      "sprite_9": {
+        "name": "sprite_9",
+        "x": 200,
+        "y": 79,
+        "width": 17,
+        "height": 35,
+        "origin_x": 0.7257368771893115,
+        "origin_y": 0.09053043626672133,
+        "endpoint_x": 0.3022074654246062,
+        "endpoint_y": 0.8848161505524356
+      },
+      "sprite_10": {
+        "name": "sprite_10",
+        "x": 234,
+        "y": 79,
+        "width": 15,
+        "height": 35,
+        "origin_x": 0.3558351274812196,
+        "origin_y": 0.10767329340957872,
+        "endpoint_x": 0.6225017941478863,
+        "endpoint_y": 0.8733875791238643
+      },
+      "sprite_11": {
+        "name": "sprite_11",
+        "x": 200,
+        "y": 131,
+        "width": 18,
+        "height": 28,
+        "origin_x": 0.7228753695637933,
+        "origin_y": 0.1357203006982246,
+        "endpoint_x": 0.1562087028971272,
+        "endpoint_y": 0.8142917292696532
+      },
+      "sprite_12": {
+        "name": "sprite_12",
+        "x": 232,
+        "y": 131,
+        "width": 17,
+        "height": 28,
+        "origin_x": 0.6124562736557815,
+        "origin_y": 0.11429172926965338,
+        "endpoint_x": 0.18892686189107455,
+        "endpoint_y": 0.8500060149839389
+      },
+      "sprite_13": {
+        "name": "sprite_13",
+        "x": 200,
+        "y": 164,
+        "width": 18,
+        "height": 25,
+        "origin_x": 0.7167428109521141,
+        "origin_y": 0.16620551296659186,
+        "endpoint_x": 0.21369866350627573,
+        "endpoint_y": 0.6862055129665918
+      },
+      "sprite_14": {
+        "name": "sprite_14",
+        "x": 230,
+        "y": 164,
+        "width": 20,
+        "height": 26,
+        "origin_x": 0.6450685298569028,
+        "origin_y": 0.12904376246787747,
+        "endpoint_x": 0.24506852985690272,
+        "endpoint_y": 0.5828899163140306
+      },
+      "sprite_15": {
+        "name": "sprite_15",
+        "x": 174,
+        "y": 202,
+        "width": 35,
+        "height": 12,
+        "origin_x": 0.9300271533099622,
+        "origin_y": 0.43555262137833495,
+        "endpoint_x": 0.05574143902424729,
+        "endpoint_y": 0.635552621378333
+      },
+      "sprite_16": {
+        "name": "sprite_16",
+        "x": 239,
+        "y": 201,
+        "width": 34,
+        "height": 15,
+        "origin_x": 0.9220867754661379,
+        "origin_y": 0.3751087637693331,
+        "endpoint_x": 0.08592180425252977,
+        "endpoint_y": 0.6151087637693347
+      }
+    },
+    "sprite_sheet_path": "PySpineGuy.png"
+  },
+  "ui_state": {
+    "viewport": {
+      "offset": [
+        124.08435141923474,
+        231.9328430312205
+      ],
+      "zoom": 3.215218050000001
+    },
+    "selected": {},
+    "scroll_positions": {}
+  }
+}

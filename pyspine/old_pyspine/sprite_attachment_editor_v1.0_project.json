@@ -1,0 +1,483 @@
+{
+  "editor_type": "Sprite Attachment Editor v1.0",
+  "data": {
+    "sprite_sheet_path": "PySpineGuy.png",
+    "sprites": {
+      "sprite_2": {
+        "name": "sprite_2",
+        "x": 35,
+        "y": 5,
+        "width": 28,
+        "height": 25,
+        "origin_x": 0.49380936012434723,
+        "origin_y": 0.8864984802427162,
+        "endpoint_x": 0.48770487229682097,
+        "endpoint_y": 0.19360019763959918
+      },
+      "sprite_3": {
+        "name": "sprite_3",
+        "x": 67,
+        "y": 6,
+        "width": 25,
+        "height": 21,
+        "origin_x": 0.481066483339269,
+        "origin_y": 0.8648791431460907,
+        "endpoint_x": 0.48222945697243974,
+        "endpoint_y": 0.21142880671380854
+      },
+      "sprite_4": {
+        "name": "sprite_4",
+        "x": 98,
+        "y": 9,
+        "width": 28,
+        "height": 17,
+        "origin_x": 0.48770487229682147,
+        "origin_y": 0.8141179377052928,
+        "endpoint_x": 0.48770487229682147,
+        "endpoint_y": 0.3200002906464694
+      },
+      "sprite_5": {
+        "name": "sprite_5",
+        "x": 130,
+        "y": 12,
+        "width": 28,
+        "height": 34,
+        "origin_x": 0.46523793155291926,
+        "origin_y": 0.8812488825314089,
+        "endpoint_x": 0.4662763008682497,
+        "endpoint_y": 0.1600001453232347
+      },
+      "sprite_6": {
+        "name": "sprite_6",
+        "x": 202,
+        "y": 5,
+        "width": 12,
+        "height": 21,
+        "origin_x": 0.8410277478849485,
+        "origin_y": 0.11178522447723041,
+        "endpoint_x": 0.3803396804703472,
+        "endpoint_y": 0.8605015875707648
+      },
+      "Head": {
+        "name": "Head",
+        "x": 7,
+        "y": 6,
+        "width": 15,
+        "height": 21,
+        "origin_x": 0.5751108055654481,
+        "origin_y": 0.8648791431460907,
+        "endpoint_x": 0.5103824282873991,
+        "endpoint_y": 0.19238118766618947
+      },
+      "sprite_1": {
+        "name": "sprite_1",
+        "x": 203,
+        "y": 41,
+        "width": 13,
+        "height": 16,
+        "origin_x": 0.612621243511088,
+        "origin_y": 0.19190833368662874,
+        "endpoint_x": 0.38185201274185726,
+        "endpoint_y": 0.7919083336866288
+      },
+      "sprite_7": {
+        "name": "sprite_7",
+        "x": 235,
+        "y": 41,
+        "width": 10,
+        "height": 15,
+        "origin_x": 0.43640761656441496,
+        "origin_y": 0.19136888926573714,
+        "endpoint_x": 0.5364076165644149,
+        "endpoint_y": 0.8180355559324037
+      },
+      "sprite_8": {
+        "name": "sprite_8",
+        "x": 235,
+        "y": 5,
+        "width": 12,
+        "height": 21,
+        "origin_x": 0.36367301380367917,
+        "origin_y": 0.16526349233266946,
+        "endpoint_x": 0.49700634713701203,
+        "endpoint_y": 0.8224063494755266
+      },
+      "sprite_9": {
+        "name": "sprite_9",
+        "x": 200,
+        "y": 79,
+        "width": 17,
+        "height": 35,
+        "origin_x": 0.7257368771893115,
+        "origin_y": 0.09053043626672133,
+        "endpoint_x": 0.3022074654246062,
+        "endpoint_y": 0.8848161505524356
+      },
+      "sprite_10": {
+        "name": "sprite_10",
+        "x": 234,
+        "y": 79,
+        "width": 15,
+        "height": 35,
+        "origin_x": 0.3558351274812196,
+        "origin_y": 0.10767329340957872,
+        "endpoint_x": 0.6225017941478863,
+        "endpoint_y": 0.8733875791238643
+      },
+      "sprite_11": {
+        "name": "sprite_11",
+        "x": 200,
+        "y": 131,
+        "width": 18,
+        "height": 28,
+        "origin_x": 0.7228753695637933,
+        "origin_y": 0.1357203006982246,
+        "endpoint_x": 0.1562087028971272,
+        "endpoint_y": 0.8142917292696532
+      },
+      "sprite_12": {
+        "name": "sprite_12",
+        "x": 232,
+        "y": 131,
+        "width": 17,
+        "height": 28,
+        "origin_x": 0.6124562736557815,
+        "origin_y": 0.11429172926965338,
+        "endpoint_x": 0.18892686189107455,
+        "endpoint_y": 0.8500060149839389
+      },
+      "sprite_13": {
+        "name": "sprite_13",
+        "x": 200,
+        "y": 164,
+        "width": 18,
+        "height": 25,
+        "origin_x": 0.7167428109521141,
+        "origin_y": 0.16620551296659186,
+        "endpoint_x": 0.21369866350627573,
+        "endpoint_y": 0.6862055129665918
+      },
+      "sprite_14": {
+        "name": "sprite_14",
+        "x": 230,
+        "y": 164,
+        "width": 20,
+        "height": 26,
+        "origin_x": 0.6450685298569028,
+        "origin_y": 0.12904376246787747,
+        "endpoint_x": 0.24506852985690272,
+        "endpoint_y": 0.5828899163140306
+      },
+      "sprite_15": {
+        "name": "sprite_15",
+        "x": 174,
+        "y": 202,
+        "width": 35,
+        "height": 12,
+        "origin_x": 0.9300271533099622,
+        "origin_y": 0.43555262137833495,
+        "endpoint_x": 0.05574143902424729,
+        "endpoint_y": 0.635552621378333
+      },
+      "sprite_16": {
+        "name": "sprite_16",
+        "x": 239,
+        "y": 201,
+        "width": 34,
+        "height": 15,
+        "origin_x": 0.9220867754661379,
+        "origin_y": 0.3751087637693331,
+        "endpoint_x": 0.08592180425252977,
+        "endpoint_y": 0.6151087637693347
+      }
+    },
+    "bones": {
+      "bone_1": {
+        "name": "bone_1",
+        "x": 487.0764244215318,
+        "y": 335.44213494291705,
+        "length": 45.97378177185578,
+        "angle": -90.0,
+        "parent": null,
+        "parent_attachment_point": "end",
+        "children": [
+          "bone_2",
+          "bone_13",
+          "bone_16"
+        ],
+        "layer": "middle",
+        "layer_order": 0
+      },
+      "bone_2": {
+        "name": "bone_2",
+        "x": 487.0764244215318,
+        "y": 289.46835317106127,
+        "length": 44.173542486455815,
+        "angle": -91.89338584574624,
+        "parent": "bone_1",
+        "parent_attachment_point": "end",
+        "children": [
+          "bone_3"
+        ],
+        "layer": "middle",
+        "layer_order": 0
+      },
+      "bone_3": {
+        "name": "bone_3",
+        "x": 485.61693928591734,
+        "y": 245.31892781872358,
+        "length": 35.30023602940294,
+        "angle": -97.12501634890177,
+        "parent": "bone_2",
+        "parent_attachment_point": "end",
+        "children": [
+          "bone_4",
+          "bone_5",
+          "bone_9"
+        ],
+        "layer": "middle",
+        "layer_order": 0
+      },
+      "bone_4": {
+        "name": "bone_4",
+        "x": 481.23848387907395,
+        "y": 210.29128456397632,
+        "length": 30.930240101434205,
+        "angle": -107.15242174021184,
+        "parent": "bone_3",
+        "parent_attachment_point": "end",
+        "children": [],
+        "layer": "middle",
+        "layer_order": 0
+      },
+      "bone_5": {
+        "name": "bone_5",
+        "x": 481.23848387907395,
+        "y": 210.29128456397632,
+        "length": 41.61895802511883,
+        "angle": 6.340191745909919,
+        "parent": "bone_3",
+        "parent_attachment_point": "end",
+        "children": [
+          "bone_6"
+        ],
+        "layer": "middle",
+        "layer_order": 0
+      },
+      "bone_6": {
+        "name": "bone_6",
+        "x": 522.6028893143036,
+        "y": 214.88732961233518,
+        "length": 38.87319308645175,
+        "angle": 64.53665493812841,
+        "parent": "bone_5",
+        "parent_attachment_point": "end",
+        "children": [
+          "bone_7"
+        ],
+        "layer": "middle",
+        "layer_order": 0
+      },
+      "bone_7": {
+        "name": "bone_7",
+        "x": 539.3157803992449,
+        "y": 249.98440089071184,
+        "length": 41.372845428264895,
+        "angle": 88.84266693187044,
+        "parent": "bone_6",
+        "parent_attachment_point": "end",
+        "children": [
+          "bone_8"
+        ],
+        "layer": "middle",
+        "layer_order": 0
+      },
+      "bone_8": {
+        "name": "bone_8",
+        "x": 540.151424953492,
+        "y": 291.3488063259415,
+        "length": 36.77073430044698,
+        "angle": 90.65106038022942,
+        "parent": "bone_7",
+        "parent_attachment_point": "end",
+        "children": [],
+        "layer": "middle",
+        "layer_order": 0
+      },
+      "bone_9": {
+        "name": "bone_9",
+        "x": 481.23848387907395,
+        "y": 210.29128456397632,
+        "length": 31.671920780526452,
+        "angle": 149.03624346792648,
+        "parent": "bone_3",
+        "parent_attachment_point": "end",
+        "children": [
+          "bone_10"
+        ],
+        "layer": "middle",
+        "layer_order": 0
+      },
+      "bone_10": {
+        "name": "bone_10",
+        "x": 454.0800358660444,
+        "y": 226.58635337179405,
+        "length": 34.406338981687114,
+        "angle": 114.38637110180137,
+        "parent": "bone_9",
+        "parent_attachment_point": "end",
+        "children": [
+          "bone_11"
+        ],
+        "layer": "middle",
+        "layer_order": 0
+      },
+      "bone_11": {
+        "name": "bone_11",
+        "x": 439.8740784438443,
+        "y": 257.92302415605894,
+        "length": 42.133808331860926,
+        "angle": 97.40691212849521,
+        "parent": "bone_10",
+        "parent_attachment_point": "end",
+        "children": [
+          "bone_12"
+        ],
+        "layer": "middle",
+        "layer_order": 0
+      },
+      "bone_12": {
+        "name": "bone_12",
+        "x": 434.4423888412384,
+        "y": 299.7052518684121,
+        "length": 29.90276712689429,
+        "angle": 97.22431569404532,
+        "parent": "bone_11",
+        "parent_attachment_point": "end",
+        "children": [],
+        "layer": "middle",
+        "layer_order": 0
+      },
+      "bone_13": {
+        "name": "bone_13",
+        "x": 487.0764244215318,
+        "y": 335.44213494291705,
+        "length": 40.31714187645473,
+        "angle": 142.96961039432134,
+        "parent": "bone_1",
+        "parent_attachment_point": "start",
+        "children": [
+          "bone_14"
+        ],
+        "layer": "middle",
+        "layer_order": 0
+      },
+      "bone_14": {
+        "name": "bone_14",
+        "x": 454.89059709187217,
+        "y": 359.7226713495024,
+        "length": 40.43172718374929,
+        "angle": 108.06047193619918,
+        "parent": "bone_13",
+        "parent_attachment_point": "end",
+        "children": [
+          "bone_15"
+        ],
+        "layer": "middle",
+        "layer_order": 0
+      },
+      "bone_15": {
+        "name": "bone_15",
+        "x": 442.35592877816623,
+        "y": 398.1623208448673,
+        "length": 45.23843738533642,
+        "angle": 92.15706308634157,
+        "parent": "bone_14",
+        "parent_attachment_point": "end",
+        "children": [
+          "bone_19"
+        ],
+        "layer": "middle",
+        "layer_order": 0
+      },
+      "bone_16": {
+        "name": "bone_16",
+        "x": 487.0764244215318,
+        "y": 335.44213494291705,
+        "length": 38.131862882192294,
+        "angle": 34.7348595397863,
+        "parent": "bone_1",
+        "parent_attachment_point": "start",
+        "children": [
+          "bone_17"
+        ],
+        "layer": "middle",
+        "layer_order": 0
+      },
+      "bone_17": {
+        "name": "bone_17",
+        "x": 518.4130952057966,
+        "y": 357.1688933533407,
+        "length": 39.02782145021101,
+        "angle": 74.47588900324573,
+        "parent": "bone_16",
+        "parent_attachment_point": "end",
+        "children": [
+          "bone_18"
+        ],
+        "layer": "middle",
+        "layer_order": 0
+      },
+      "bone_18": {
+        "name": "bone_18",
+        "x": 528.8586521338849,
+        "y": 394.77289829445857,
+        "length": 46.165761530713795,
+        "angle": 88.40837151901239,
+        "parent": "bone_17",
+        "parent_attachment_point": "end",
+        "children": [
+          "bone_20"
+        ],
+        "layer": "middle",
+        "layer_order": 0
+      },
+      "bone_19": {
+        "name": "bone_19",
+        "x": 440.65320103264065,
+        "y": 443.3687024219369,
+        "length": 42.529568453224954,
+        "angle": 90.0,
+        "parent": "bone_15",
+        "parent_attachment_point": "end",
+        "children": [],
+        "layer": "middle",
+        "layer_order": 0
+      },
+      "bone_20": {
+        "name": "bone_20",
+        "x": 530.1409331591628,
+        "y": 440.9208483365021,
+        "length": 38.66324404838633,
+        "angle": 90.0,
+        "parent": "bone_18",
+        "parent_attachment_point": "end",
+        "children": [],
+        "layer": "middle",
+        "layer_order": 0
+      }
+    },
+    "sprite_instances": {}
+  },
+  "ui_state": {
+    "viewport": {
+      "offset": [
+        -576.4265309000004,
+        -264.7413680000001
+      ],
+      "zoom": 1.9487171000000014
+    },
+    "selected": {},
+    "scroll_positions": {}
+  }
+}

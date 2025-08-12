@@ -1,0 +1,292 @@
+{
+  "editor_type": "Bone Editor v1.0",
+  "data": {
+    "bones": {
+      "bone_9": {
+        "name": "bone_9",
+        "x": 482.08096598871003,
+        "y": 213.26430887922072,
+        "length": 31.671920780526452,
+        "angle": 149.03624346792648,
+        "parent": "Chest",
+        "parent_attachment_point": "end",
+        "children": [
+          "bone_10"
+        ],
+        "layer": "behind",
+        "layer_order": 0
+      },
+      "bone_10": {
+        "name": "bone_10",
+        "x": 454.9225179756805,
+        "y": 229.55937768703845,
+        "length": 34.406338981687114,
+        "angle": 114.38637110180137,
+        "parent": "bone_9",
+        "parent_attachment_point": "end",
+        "children": [
+          "bone_11"
+        ],
+        "layer": "behind",
+        "layer_order": 0
+      },
+      "bone_11": {
+        "name": "bone_11",
+        "x": 440.7165605534804,
+        "y": 260.89604847130335,
+        "length": 42.133808331860926,
+        "angle": 97.40691212849521,
+        "parent": "bone_10",
+        "parent_attachment_point": "end",
+        "children": [
+          "bone_12"
+        ],
+        "layer": "behind",
+        "layer_order": 0
+      },
+      "bone_12": {
+        "name": "bone_12",
+        "x": 435.2848709508745,
+        "y": 302.6782761836565,
+        "length": 29.90276712689429,
+        "angle": 97.22431569404532,
+        "parent": "bone_11",
+        "parent_attachment_point": "end",
+        "children": [],
+        "layer": "behind",
+        "layer_order": 0
+      },
+      "bone_13": {
+        "name": "bone_13",
+        "x": 487.91890653116786,
+        "y": 338.41515925816145,
+        "length": 40.31714187645473,
+        "angle": 142.96961039432134,
+        "parent": "Pelvis",
+        "parent_attachment_point": "start",
+        "children": [
+          "bone_14"
+        ],
+        "layer": "behind",
+        "layer_order": 0
+      },
+      "bone_14": {
+        "name": "bone_14",
+        "x": 455.73307920150825,
+        "y": 362.6956956647468,
+        "length": 40.43172718374929,
+        "angle": 108.06047193619918,
+        "parent": "bone_13",
+        "parent_attachment_point": "end",
+        "children": [
+          "bone_15"
+        ],
+        "layer": "behind",
+        "layer_order": 0
+      },
+      "bone_15": {
+        "name": "bone_15",
+        "x": 443.1984108878023,
+        "y": 401.1353451601117,
+        "length": 45.23843738533642,
+        "angle": 92.15706308634157,
+        "parent": "bone_14",
+        "parent_attachment_point": "end",
+        "children": [
+          "bone_19"
+        ],
+        "layer": "behind",
+        "layer_order": 0
+      },
+      "bone_16": {
+        "name": "bone_16",
+        "x": 487.91890653116786,
+        "y": 338.41515925816145,
+        "length": 38.131862882192294,
+        "angle": 34.7348595397863,
+        "parent": "Pelvis",
+        "parent_attachment_point": "start",
+        "children": [
+          "bone_17"
+        ],
+        "layer": "front",
+        "layer_order": 0
+      },
+      "bone_17": {
+        "name": "bone_17",
+        "x": 519.2555773154327,
+        "y": 360.1419176685851,
+        "length": 39.02782145021101,
+        "angle": 74.47588900324573,
+        "parent": "bone_16",
+        "parent_attachment_point": "end",
+        "children": [
+          "bone_18"
+        ],
+        "layer": "front",
+        "layer_order": 0
+      },
+      "bone_18": {
+        "name": "bone_18",
+        "x": 529.701134243521,
+        "y": 397.745922609703,
+        "length": 46.165761530713795,
+        "angle": 88.40837151901239,
+        "parent": "bone_17",
+        "parent_attachment_point": "end",
+        "children": [
+          "bone_20"
+        ],
+        "layer": "front",
+        "layer_order": 0
+      },
+      "bone_19": {
+        "name": "bone_19",
+        "x": 441.49568314227673,
+        "y": 446.3417267371813,
+        "length": 42.529568453224954,
+        "angle": 90.0,
+        "parent": "bone_15",
+        "parent_attachment_point": "end",
+        "children": [],
+        "layer": "behind",
+        "layer_order": 0
+      },
+      "bone_20": {
+        "name": "bone_20",
+        "x": 530.9834152687989,
+        "y": 443.8938726517465,
+        "length": 38.66324404838633,
+        "angle": 90.0,
+        "parent": "bone_18",
+        "parent_attachment_point": "end",
+        "children": [],
+        "layer": "front",
+        "layer_order": 0
+      },
+      "L_Shoulder": {
+        "name": "L_Shoulder",
+        "x": 482.08096598871003,
+        "y": 213.26430887922072,
+        "length": 41.61895802511883,
+        "angle": 6.340191745909919,
+        "parent": "Chest",
+        "parent_attachment_point": "end",
+        "children": [
+          "L_Bicep"
+        ],
+        "layer": "front",
+        "layer_order": 0
+      },
+      "Head": {
+        "name": "Head",
+        "x": 482.08096598871003,
+        "y": 213.26430887922072,
+        "length": 30.930240101434205,
+        "angle": -107.15242174021184,
+        "parent": "Chest",
+        "parent_attachment_point": "end",
+        "children": [],
+        "layer": "middle",
+        "layer_order": 0
+      },
+      "Chest": {
+        "name": "Chest",
+        "x": 486.4594213955534,
+        "y": 248.29195213396798,
+        "length": 35.30023602940294,
+        "angle": -97.12501634890177,
+        "parent": "Waist",
+        "parent_attachment_point": "end",
+        "children": [
+          "Head",
+          "L_Shoulder",
+          "bone_9"
+        ],
+        "layer": "middle",
+        "layer_order": 0
+      },
+      "Waist": {
+        "name": "Waist",
+        "x": 487.91890653116786,
+        "y": 292.44137748630567,
+        "length": 44.173542486455815,
+        "angle": -91.89338584574624,
+        "parent": "Pelvis",
+        "parent_attachment_point": "end",
+        "children": [
+          "Chest"
+        ],
+        "layer": "middle",
+        "layer_order": 0
+      },
+      "Pelvis": {
+        "name": "Pelvis",
+        "x": 487.91890653116786,
+        "y": 338.41515925816145,
+        "length": 45.97378177185578,
+        "angle": -90.0,
+        "parent": null,
+        "parent_attachment_point": "end",
+        "children": [
+          "Waist",
+          "bone_13",
+          "bone_16"
+        ],
+        "layer": "middle",
+        "layer_order": 0
+      },
+      "L_Bicep": {
+        "name": "L_Bicep",
+        "x": 523.4453714239397,
+        "y": 217.86035392757958,
+        "length": 38.87319308645175,
+        "angle": 64.53665493812841,
+        "parent": "L_Shoulder",
+        "parent_attachment_point": "end",
+        "children": [
+          "L_Forearm"
+        ],
+        "layer": "front",
+        "layer_order": 0
+      },
+      "L_Forearm": {
+        "name": "L_Forearm",
+        "x": 540.158262508881,
+        "y": 252.95742520595624,
+        "length": 41.372845428264895,
+        "angle": 88.84266693187044,
+        "parent": "L_Bicep",
+        "parent_attachment_point": "end",
+        "children": [
+          "L_Hand"
+        ],
+        "layer": "front",
+        "layer_order": 0
+      },
+      "L_Hand": {
+        "name": "L_Hand",
+        "x": 540.9939070631281,
+        "y": 294.3218306411859,
+        "length": 36.77073430044698,
+        "angle": 90.65106038022942,
+        "parent": "L_Forearm",
+        "parent_attachment_point": "end",
+        "children": [],
+        "layer": "front",
+        "layer_order": 0
+      }
+    }
+  },
+  "ui_state": {
+    "viewport": {
+      "offset": [
+        -959.1716295978117,
+        -369.59802802368176
+      ],
+      "zoom": 2.5908369443533075
+    },
+    "selected": {},
+    "scroll_positions": {}
+  }
+}

@@ -3,7 +3,7 @@ import pygame_gui
 import sys
 import math
 import os
-from typing import Dict, Any, Optional, Tuple, List
+from typing import Dict, Any, Optional, Tuple
 from dataclasses import asdict
 
 # Import configuration and core classes
@@ -11,7 +11,7 @@ from configuration import *
 from data_classes import ResizeHandle, SpriteRect
 from viewport_common import ViewportManager
 from drawing_common import draw_grid
-from file_common import save_json_project, load_json_project
+from file_common import save_json_project
 
 # Import undo/redo system
 from undo_redo_common import UndoRedoMixin, UndoRedoCommand
@@ -21,15 +21,14 @@ from sprite_commands import (
 )
 
 # Import new panel system
-from pygame_gui_extensions.hierarchy_panel import (
+from pyspine.old_pyspine.pygame_gui_extensions.hierarchy_panel import (
     HierarchyPanel, HierarchyNode, HierarchyNodeType, HierarchyConfig,
     UI_HIERARCHY_NODE_SELECTED
 )
-from pygame_gui_extensions.property_panel import (
-    PropertyPanel, PropertySchema, PropertyType, PropertyConfig, PropertyFlags,
-    UI_PROPERTY_CHANGED
+from pyspine.old_pyspine.pygame_gui_extensions.property_panel import (
+    PropertyPanel, PropertySchema, PropertyType, PropertyConfig, UI_PROPERTY_CHANGED
 )
-from pygame_gui_extensions.wip.navigator_panel import (
+from pyspine.old_pyspine.pygame_gui_extensions.wip.navigator_panel import (
     NavigatorPanel, NavigatorConfig, NavigatorViewport, NavigatorMode,
     UI_NAVIGATOR_VIEWPORT_CHANGED
 )
