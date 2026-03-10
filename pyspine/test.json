@@ -1,0 +1,46 @@
+{
+  "editor_type": "Mini PySpine Assembly v1",
+  "sprite_project_path": "sprite_sheet_editor_v1.0_project.json",
+  "instances": [
+    {
+      "name": "sprite_4_1",
+      "sprite_name": "sprite_4",
+      "root_x": 184.26532748457993,
+      "root_y": 224.54258236031873,
+      "rotation": -73.79873724818015,
+      "parent": null,
+      "parent_point": null,
+      "self_point": null,
+      "local_rotation": 0.0
+    },
+    {
+      "name": "sprite_4_2",
+      "sprite_name": "sprite_4",
+      "root_x": 186.69639047348994,
+      "root_y": 238.38923963708064,
+      "rotation": 0.0,
+      "parent": "sprite_4_1",
+      "parent_point": "endpoint",
+      "self_point": "origin",
+      "local_rotation": -46.187902350949344
+    },
+    {
+      "name": "sprite_4_3",
+      "sprite_name": "sprite_4",
+      "root_x": 191.78556189395977,
+      "root_y": 262.98690150268476,
+      "rotation": 0.0,
+      "parent": "sprite_4_2",
+      "parent_point": "endpoint",
+      "self_point": "origin",
+      "local_rotation": -41.071809226532
+    }
+  ],
+  "ui_state": {
+    "zoom": 3.536921536500002,
+    "offset": [
+      -13.289667334000796,
+      -451.8603809330009
+    ]
+  }
+}
