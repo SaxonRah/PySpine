@@ -239,22 +239,243 @@ This shared solver allows all editors to behave consistently.
 
 ---
 
+# Controls (Sprite Editor)
+
+```
+Ctrl+L              load sprite project
+Ctrl+O              load sprite sheet image
+Ctrl+S              save sprite project
+
+Left Click          select sprite
+Drag                move selected attachment point
+
+A                   add attachment point
+Delete              delete selected sprite
+Shift+Delete        delete selected attachment point
+
+F2                  rename sprite
+Shift+F2            rename attachment point
+
+Tab                 cycle attachment points
+
+Mousewheel          zoom viewport
+Space + Drag        pan viewport
+```
+
 # Controls (Assembly Editor)
 
 ```
-Ctrl+L     load sprite project
-Ctrl+O     load assembly
-Ctrl+S     save assembly
-N          create instance
-Shift+click point    attach selected instance
-U          detach instance
-F2         rename instance
-Delete     delete instance
-Ctrl+D     duplicate instance
-PgUp/PgDn  change draw order
-Space      pan view
-Mousewheel zoom
+Ctrl+L              load sprite project
+Ctrl+O              load assembly
+Ctrl+S              save assembly
+
+N                   create instance
+Shift+click point   attach selected instance
+U                   detach instance
+F2                  rename instance
+Delete              delete instance
+Ctrl+D              duplicate instance
+
+PgUp/PgDn           change draw order
+
+Space               pan view
+Mousewheel          zoom
 ```
+
+# Controls (Animation Editor)
+
+```
+Ctrl+O              load animation project
+Ctrl+S              save animation project
+
+Space               play / pause animation
+Mousewheel          zoom timeline
+Space + Drag        pan viewport
+
+Left Click          select part
+Drag                rotate or move selected part
+
+K                   set keyframe for selected property
+Shift+K             delete keyframe
+
+,                   step backward one frame
+.                   step forward one frame
+
+<                   jump to previous keyframe
+>                   jump to next keyframe
+
+A                   create new animation
+F2                  rename animation
+Delete              delete animation
+
+C                   clear keys for selected part
+```
+
+---
+
+# Basic Workflow Example
+
+Creating and animating a character in PySpine typically follows these steps:
+
+```
+sprite sheet
+    ↓
+define sprites + attachment points
+    ↓
+assemble character
+    ↓
+animate keyframes
+```
+
+Below is a typical workflow.
+
+---
+
+## 1. Prepare a Sprite Sheet
+
+Create a sprite sheet containing the individual parts of your character.
+
+Example parts:
+
+```
+head
+torso
+upper_arm
+lower_arm
+hand
+upper_leg
+lower_leg
+foot
+```
+
+Each body part should be a **separate sprite region** in the sheet.
+
+---
+
+## 2. Define Sprites
+
+Open the **Sprite Editor** and load the sprite sheet.
+
+For each body part:
+
+1. Draw a rectangle around the sprite
+2. Add attachment points where connections should occur
+
+Example torso attachment points:
+
+```
+neck
+hip
+shoulder_L
+shoulder_R
+```
+
+Example arm attachment points:
+
+```
+origin
+elbow
+```
+
+Attachment points define **how parts connect together later**.
+
+Save the sprite project.
+
+---
+
+## 3. Build the Character Assembly
+
+Open the **Assembly Editor**.
+
+Create sprite instances and attach them together using their attachment points.
+
+Example hierarchy:
+
+```
+torso
+ ├── head
+ ├── arm_L
+ │     └── forearm_L
+ │           └── hand_L
+ └── arm_R
+       └── forearm_R
+             └── hand_R
+```
+
+You attach parts by:
+
+```
+Shift + click attachment point
+```
+
+This creates the hierarchical structure of the character.
+
+Save the assembly.
+
+---
+
+## 4. Create an Animation
+
+Open the **Animation Editor** and load the assembly.
+
+Create a new animation and set keyframes for parts.
+
+Example walk animation:
+
+```
+frame 0     neutral pose
+frame 10    left leg forward
+frame 20    neutral pose
+frame 30    right leg forward
+frame 40    neutral pose
+```
+
+Keyframes store transformations such as:
+
+```
+rotation
+root position
+local rotation
+```
+
+---
+
+## 5. Preview Animation
+
+Press:
+
+```
+Space
+```
+
+to play the animation.
+
+The solver propagates transformations through the hierarchy so attached parts move naturally.
+
+---
+
+# Summary
+
+The full PySpine workflow looks like this:
+
+```
+Sprite Sheet
+      ↓
+Sprite Editor
+      ↓
+Assembly Editor
+      ↓
+Animation Editor
+      ↓
+Animated Character
+```
+
+Because everything is stored as **plain JSON**, projects are easy to:
+
+* version control
+* modify externally
+* generate procedurally
+* integrate into game engines
 
 ---
 
