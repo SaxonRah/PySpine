@@ -10,7 +10,7 @@ except Exception:
     filedialog = None
     simpledialog = None
 
-import pyspine_model as model
+import _ps_model as model
 
 WINDOW_W = 1280
 WINDOW_H = 820

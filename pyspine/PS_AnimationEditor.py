@@ -14,8 +14,8 @@ except Exception:
     filedialog = None
     simpledialog = None
 
-import pyspine_model as model
-import pyspine_solver as solver
+import _ps_model as model
+import _ps_solver as solver
 
 WINDOW_W = 1500
 WINDOW_H = 940
