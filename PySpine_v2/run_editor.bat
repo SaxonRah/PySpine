@@ -1,0 +1,1 @@
+python -m pyspine.cli editor new

@@ -1,0 +1,1 @@
+python -m pyspine.cli editor examples\pyspine_guy_rig.json
