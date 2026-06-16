@@ -205,6 +205,21 @@
         }
       },
       {
+        "name": "reference",
+        "rect": [
+          65,
+          78,
+          62,
+          114
+        ],
+        "points": {
+          "origin": [
+            0.5,
+            0.5
+          ]
+        }
+      },
+      {
         "name": "right_bicep",
         "rect": [
           201.0,
@@ -314,10 +329,10 @@
       {
         "name": "right_handopen",
         "rect": [
-          100,
-          230,
-          19,
-          18
+          102,
+          235,
+          18,
+          19
         ],
         "points": {
           "origin": [
@@ -325,8 +340,8 @@
             0.5
           ],
           "right_wrist": [
-            0.8420041727945752,
-            0.4894734295303383
+            0.5072320141888906,
+            0.1320441110885835
           ]
         }
       },
@@ -434,6 +449,22 @@
   },
   "rig": {
     "instances": [
+      {
+        "name": "reference_01",
+        "sprite": "reference",
+        "parent": null,
+        "parent_point": null,
+        "self_point": "origin",
+        "x": 238.09586506550005,
+        "y": 144.23990002690047,
+        "rotation": 0.0,
+        "local_rotation": 0.0,
+        "z": 4,
+        "visible": true,
+        "locked": false,
+        "scale_x": 1.0,
+        "scale_y": 1.0
+      },
       {
         "name": "right_calf_01",
         "sprite": "right_calf",
@@ -600,8 +631,8 @@
         "parent": null,
         "parent_point": null,
         "self_point": "origin",
-        "x": 180.0,
-        "y": 120.0,
+        "x": 238.45953845594968,
+        "y": 117.63001871124528,
         "rotation": 0.0,
         "local_rotation": 0.0,
         "z": 10,
